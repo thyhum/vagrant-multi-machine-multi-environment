@@ -1,0 +1,23 @@
+---
+machines:
+  - name      : docker
+    memory    : 1024
+    primary   : true
+    autostart : true
+    network:
+    - type: private
+      addr: 10.255.255.36
+    - type: public
+      addr: 192.168.250.36
+
+  - name      : docker2
+    memory    : 4096
+    network:
+    - type: private
+      addr: 10.255.255.37
+    - type: public
+      addr: 192.168.250.37
+
+machine_default:
+  vbguest.auto_update : true
+  box:  centos/7

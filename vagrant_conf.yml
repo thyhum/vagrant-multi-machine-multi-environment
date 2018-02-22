@@ -1,0 +1,23 @@
+---
+machine_default:
+  box:                 centos/7
+  cpus:                1
+  domain:              '.put.your.domain.here'
+  memory:              1024
+  linked_clone:        true
+  gui:                 false
+  primary:             false
+  autostart:           false
+  group:               '/Vagrant/Group'
+  ssh.insert_key:      false
+  vbguest.auto_update: false
+  vm.box_check_update: false
+
+default:
+  private_ips:
+    netmask: 255.255.255.0
+  public_ips:
+    netmask: 255.255.255.0
+    bridges:
+    - enp5s0
+    - wlp3s0
